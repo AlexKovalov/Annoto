@@ -1,0 +1,25 @@
+{
+  "name": "tooltip",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/components.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "scripts": {
+    "start": "stencil build --dev --watch --serve",
+    "build": "stencil build --dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@stencil/core": "^1.16.4",
+    "@stencil/sass": "^1.3.2",
+    "static-here": "^1.0.0",
+    "typescript": "^3.9.7"
+  }
+}
