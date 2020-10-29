@@ -4,38 +4,11 @@
             background-color: rgba(236, 243, 246, 50);
             color: #5F6976;
             font-family: "Pier Sans", "proxima-nova", "Helvetica Neue", sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
 
         .container {
             width: 100px;
             margin: auto;
-            position: relative;
-        }
-
-        .my-tooltip {
-            background: gray;
-            font-size: 11px;
-            color: #fff;
-            padding: 5px;
-            border-radius: 3px;
-            font-weight: 600;
-            width: max-content;
-            position: relative;
-            display: inline-block;
-            visibility: hidden;
-        }
-
-        #my-icon:hover ~ .my-tooltip {
-            visibility: visible;
-            top: -120px;
-        }
-
-        .container:hover ~ .my-tooltip:nth-of-type(1){
-            visibility: visible;
-            top: -80px;
         }</style> </head> <body> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat orci non tortor cursus, non lobortis dui
     ornare. In laoreet a est vitae ultricies. Suspendisse dapibus nunc in feugiat posuere. Duis sed imperdiet urna,
     vitae luctus est. Ut commodo feugiat mattis. Nulla lacinia nisi non massa venenatis, non vulputate erat tincidunt.
@@ -43,14 +16,14 @@
     lobortis nibh eget blandit auctor. Mauris volutpat diam blandit ante ornare, non molestie erat faucibus. Cras vitae
     metus vitae tellus consectetur congue. Duis hendrerit dignissim ligula, non maximus turpis tempus sit amet.
     Curabitur felis quam, facilisis sed eleifend eu, ultricies ac magna. Morbi ac mauris aliquet, ornare sem sed,
-    dignissim mi. Praesent nisi ipsum, porttitor a elit nec, blandit lobortis purus. In porta mi eu cursus varius.</p> <div class="container"> <h1 id="hello-id">Hello!</h1> </div> <nn-tooltip class="my-tooltip" for="hello-id" text="This is tooltip">This is tooltip</nn-tooltip> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat orci non tortor cursus, non lobortis dui
+    dignissim mi. Praesent nisi ipsum, porttitor a elit nec, blandit lobortis purus. In porta mi eu cursus varius.</p> <div class="container"> <h1 id="hello-id">Hello!</h1> </div> <nn-tooltip for="hello-id" text="This is tooltip">This is tooltip</nn-tooltip> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat orci non tortor cursus, non lobortis dui
     ornare. In laoreet a est vitae ultricies. Suspendisse dapibus nunc in feugiat posuere. Duis sed imperdiet urna,
     vitae luctus est. Ut commodo feugiat mattis. Nulla lacinia nisi non massa venenatis, non vulputate erat tincidunt.
     Praesent eu augue tincidunt, fermentum elit eu, dignissim lorem. Phasellus lacinia nec eros eget posuere. Donec
     lobortis nibh eget blandit auctor. Mauris volutpat diam blandit ante ornare, non molestie erat faucibus. Cras vitae
     metus vitae tellus consectetur congue. Duis hendrerit dignissim ligula, non maximus turpis tempus sit amet.
     Curabitur felis quam, facilisis sed eleifend eu, ultricies ac magna. Morbi ac mauris aliquet, ornare sem sed,
-    dignissim mi. Praesent nisi ipsum, porttitor a elit nec, blandit lobortis purus. In porta mi eu cursus varius.</p> <div class="container"> <div style="padding: 32px; position: relative; background-color: yellow; width: 100px;"> <p>This is my box</p> <ion-icon id="my-icon" name="heart" size="large" style="position: absolute; right: 0; top: 0;"></ion-icon> <nn-tooltip class="my-tooltip" for="my-icon" text="This is my icon tooltip">This is my icon tooltip</nn-tooltip> </div> </div> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat orci non tortor cursus, non lobortis dui
+    dignissim mi. Praesent nisi ipsum, porttitor a elit nec, blandit lobortis purus. In porta mi eu cursus varius.</p> <div class="container"> <div style="padding: 32px; position: relative; background-color: yellow; width: 100px;"> <p>This is my box</p> <ion-icon id="my-icon" name="heart" size="large" style="position: absolute; right: 0; top: 0;"></ion-icon> <nn-tooltip for="my-icon" text="This is my icon tooltip">This is my icon tooltip</nn-tooltip> </div> </div> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat orci non tortor cursus, non lobortis dui
     ornare. In laoreet a est vitae ultricies. Suspendisse dapibus nunc in feugiat posuere. Duis sed imperdiet urna,
     vitae luctus est. Ut commodo feugiat mattis. Nulla lacinia nisi non massa venenatis, non vulputate erat tincidunt.
     Praesent eu augue tincidunt, fermentum elit eu, dignissim lorem. Phasellus lacinia nec eros eget posuere. Donec

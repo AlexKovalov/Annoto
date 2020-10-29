@@ -5,48 +5,40 @@ import {Component, h, Prop} from "@stencil/core";
     styleUrl: "nn-tooltip.css",
     shadow: true
 })
+
 export class NnTooltip {
     @Prop() text: string
     @Prop() for: string;
+    private myTooltip?: HTMLElement;
+
+    componentDidLoad(){
+        let targetElement = document.getElementById(this.for);
+        targetElement.addEventListener('mouseover', ()=>{
+            let rect = targetElement.getBoundingClientRect();
+            console.log(rect);
+            this.setVisibility(true, rect);
+        })
+        targetElement.addEventListener('mouseout',()=>{
+            this.setVisibility(false, {});
+        })
+        console.log(targetElement);
+    }
+
+    setVisibility(isVisible: boolean, pos){
+        let visibility = isVisible ? 'visible': 'hidden';
+
+        this.myTooltip.style.top = (pos.top-20)+"px";
+        this.myTooltip.style.left = pos.left+"px";
+        this.myTooltip.style.visibility = visibility;
+        console.log(visibility);
+    }
 
     render() {
         return (
-            <span>
+            <span ref={el=> this.myTooltip=el as HTMLElement}
+                class={'my-tooltip'}>
                 {this.text}
             </span>
         );
     }
 }
-
-// Delay with Observables
-
-// myDelay(i) {
-//     return  of({}).pipe(delay(i));
-// }
-//
-// test() {
-//     console.log(new Date().toISOString());
-//     this.myDelay(3000).subscribe(() => {
-//         console.log(new Date().toISOString());
-//     });
-// }
-//
-// minDelay<T>(action: Observable<T>, minDelayMiliSec = 0): Observable<any[]> {
-//     return  forkJoin(
-//         [
-//             action,
-//             this.myDelay(minDelayMiliSec)
-//         ]
-//     );
-// }
-//
-// test2() {
-//     let showSpinner = false;
-//
-//     showSpinner = true;
-//     this.minDelay(fromFetch(fetch(...)), 500).subscribe((data) => {
-//         console.log(data[0]);
-//         // update ui
-//         showSpinner = false;
-//     });
-// }

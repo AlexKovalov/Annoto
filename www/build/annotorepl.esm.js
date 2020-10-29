@@ -1,5 +1,5 @@
-import { b as bootstrapLazy } from './index-dd5fd80b.js';
-import { p as patchBrowser, g as globalScripts } from './app-globals-651847df.js';
+import { b as bootstrapLazy } from './index-5c2e9815.js';
+import { p as patchBrowser, g as globalScripts } from './app-globals-8e1ed2ae.js';
 
 patchBrowser().then(options => {
   globalScripts();

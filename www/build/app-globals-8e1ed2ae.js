@@ -1,4 +1,4 @@
-import { B as BUILD, C as CSS, p as plt, w as win, a as promiseResolve, c as consoleDevInfo, H, d as doc, N as NAMESPACE } from './index-dd5fd80b.js';
+import { B as BUILD, C as CSS, p as plt, w as win, a as promiseResolve, c as consoleDevInfo, H, d as doc, N as NAMESPACE } from './index-5c2e9815.js';
 
 /*
  Stencil Client Patch v1.16.4 | MIT Licensed | https://stenciljs.com
